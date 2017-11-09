@@ -3,8 +3,11 @@
 
 <div class="app-mensajes" id="app-msjs">
 
-  <div class="text-right" *ngFor="let chat of cs.chats">
-    <span class="badge badge-primary">{{chat.nombre}}</span>
+  <div [ngClass]="{'text-right': cs.usuario.uid == chat.uid}" 
+      *ngFor="let chat of cs.chats">
+    <span [ngClass]="{'badge-primary': cs.usuario.uid === chat.uid, 'badge-success': cs.usuario.uid != chat.uid}" 
+      
+    class="badge">{{chat.nombre}}</span>
     <p>{{chat.mensaje}}</p>
   </div>
 </div>
@@ -13,4 +16,4 @@
   [(ngModel)]="mensaje"
   placeholder="Escribir un mensaje..."
   (keyup.enter) = "enviarMensaje()"
-/>
+>

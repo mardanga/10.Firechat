@@ -23,7 +23,7 @@ export class ChatComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.elemento = document.getElementById('app-mesnajes');
+    this.elemento = document.getElementById('app-mensajes');
   }
 
 

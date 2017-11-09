@@ -16,7 +16,7 @@ export class ChatComponent implements OnInit {
     this.cs.cargarMensajes().subscribe(
       () => {
         setTimeout(function() {
-         this.eleme = document.getElementById('app-mensajes');
+         this.eleme = document.getElementById('app-msjs');
         this.eleme.scrollTop = this.eleme.scrollHeight;
         }, 20);
       }
@@ -24,7 +24,7 @@ export class ChatComponent implements OnInit {
    }
 
   ngOnInit() {
-    // this.eleme = document.getElementById('app-msjs');
+     this.eleme = document.getElementById('app-msjs');
   }
 
 
